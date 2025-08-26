@@ -48,6 +48,10 @@
 
 /area/golden_arrow/prep_hallway
 	name = "\improper Prep Hallway"
+	icon_state = "starboard"
+
+/area/golden_arrow/port_hallway
+	name = "\improper Port Hallway"
 	icon_state = "port"
 
 /area/golden_arrow/platoon_sergeant
