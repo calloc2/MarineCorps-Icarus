@@ -38,3 +38,6 @@ endmap
 
 map uscss_onyx_karain
 endmap
+
+map golden_arrow_wy
+endmap

@@ -100,7 +100,9 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai/pmc = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/smartgunner/ai/pmc = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/leader/ai/pmc = JOB_SQUAD_LEADER,\
-		/datum/job/command/bridge/ai/pmc = JOB_PMCPLAT_OW),\
+		/datum/job/command/bridge/ai/pmc = JOB_PMCPLAT_OW,\
+		/datum/job/special/wey_yu/pmc/synth = JOB_PMC_SYNTH,\
+		/datum/job/civilian/reporter = JOB_COMBAT_REPORTER),\
 		/datum/squad/marine/forecon = list(/datum/job/marine/standard/ai/forecon = JOB_SQUAD_MARINE,\
 		/datum/job/marine/standard/ai/rto = JOB_SQUAD_RTO,\
 		/datum/job/marine/leader/ai/forecon = JOB_SQUAD_LEADER,\

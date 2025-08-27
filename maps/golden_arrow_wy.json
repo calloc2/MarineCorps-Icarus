@@ -1,0 +1,8 @@
+{
+    "map_name": "USCSS Tucano",
+    "map_path": "map_files/golden_arrow_wy",
+    "map_file": "golden_arrow_wy.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/pmc"
+}
