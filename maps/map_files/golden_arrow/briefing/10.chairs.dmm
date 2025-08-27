@@ -1,4 +1,25 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow"
+	},
+/obj/structure/machinery/door_control{
+	name = "muster point door-control";
+	pixel_x = 23;
+	pixel_y = -6;
+	id = "musterdoor"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/briefing)
+"ab" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/briefing)
 "aD" = (
 /obj/structure/platform{
 	dir = 4;
@@ -25,39 +46,36 @@
 /area/golden_arrow/briefing)
 "bA" = (
 /obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4
+	dir = 4;
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 4;
 	pixel_x = 1;
-	pixel_y = 3
+	pixel_y = 3;
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 4;
 	pixel_x = 2;
-	pixel_y = 6
+	pixel_y = 6;
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 4;
 	pixel_x = 3;
-	pixel_y = 9
+	pixel_y = 9;
+	can_buckle = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
 "cU" = (
 /obj/structure/phone_base{
 	name = "briefing receiver";
-	phone_category = "Golden Arrow";
-	phone_id = "Briefing";
+	dir = 8;
 	pixel_x = 17;
-	dir = 8
-	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff"
+	phone_category = "Golden Arrow";
+	phone_id = "Briefing"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
@@ -81,8 +99,8 @@
 /area/golden_arrow/briefing)
 "dO" = (
 /obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1
+	dir = 1;
+	light_color = "#dae2ff"
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -145,9 +163,9 @@
 	layer = 2.52
 	},
 /obj/item/device/radio/intercom{
-	freerange = 1;
 	name = "General Listening Channel";
-	pixel_y = 26
+	pixel_y = 26;
+	freerange = 1
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
@@ -191,8 +209,8 @@
 "iM" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
-	pixel_y = 5;
-	layer = 5.2
+	layer = 5.2;
+	pixel_y = 5
 	},
 /turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
@@ -248,8 +266,8 @@
 "mE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
-	pixel_y = 1;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -282,8 +300,8 @@
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
-	pixel_y = -10;
-	layer = 5.2
+	layer = 5.2;
+	pixel_y = -10
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -311,26 +329,26 @@
 	},
 /obj/effect/decal/strata_decals/grime/grime1,
 /obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 8
+	dir = 8;
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 8;
+	pixel_x = -1;
 	pixel_y = 3;
-	pixel_x = -1
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 8;
+	pixel_x = -2;
 	pixel_y = 6;
-	pixel_x = -2
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 8;
+	pixel_x = -3;
 	pixel_y = 9;
-	pixel_x = -3
+	can_buckle = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
@@ -384,26 +402,26 @@
 /area/golden_arrow/briefing)
 "yH" = (
 /obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 8
+	dir = 8;
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 8;
+	pixel_x = -1;
 	pixel_y = 3;
-	pixel_x = -1
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 8;
+	pixel_x = -2;
 	pixel_y = 6;
-	pixel_x = -2
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 8;
+	pixel_x = -3;
 	pixel_y = 9;
-	pixel_x = -3
+	can_buckle = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/briefing)
@@ -508,13 +526,13 @@
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
-	pixel_y = -10;
-	layer = 5.2
+	layer = 5.2;
+	pixel_y = -10
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
-	pixel_y = 1;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 1
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -536,8 +554,8 @@
 	},
 /obj/effect/decal/strata_decals/grime/grime2,
 /obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1
+	dir = 1;
+	light_color = "#dae2ff"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
@@ -554,24 +572,24 @@
 "IX" = (
 /obj/structure/surface/table/almayer,
 /obj/item/notepad/black{
-	pixel_y = -3;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -3
 	},
 /obj/item/tool/pen{
 	pixel_x = 5
 	},
 /obj/item/prop/tableflag{
-	pixel_y = 13;
-	layer = 5
+	layer = 5;
+	pixel_y = 13
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "JH" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
+	name = "\improper Assembly Room";
 	dir = 1;
 	id = "briefingdoor";
-	req_access = null;
-	name = "\improper Assembly Room"
+	req_access = null
 	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
@@ -581,8 +599,8 @@
 /area/golden_arrow/briefing)
 "Ka" = (
 /obj/structure/prop/almayer/whiteboard{
-	pixel_y = 25;
-	density = 0
+	density = 0;
+	pixel_y = 25
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -595,8 +613,8 @@
 	layer = 2.52
 	},
 /obj/structure/extinguisher_cabinet/alt{
-	pixel_y = 29;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 29
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
@@ -635,9 +653,9 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/firealarm{
-	pixel_y = 2;
 	dir = 8;
-	pixel_x = -21
+	pixel_x = -21;
+	pixel_y = 2
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
@@ -650,8 +668,8 @@
 /area/golden_arrow/briefing)
 "Op" = (
 /obj/structure/prop/almayer/whiteboard/clear{
-	pixel_y = 18;
-	density = 0
+	density = 0;
+	pixel_y = 18
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -666,26 +684,26 @@
 	layer = 2.52
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4
+	dir = 4;
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 4;
 	pixel_x = 1;
-	pixel_y = 3
+	pixel_y = 3;
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 4;
 	pixel_x = 2;
-	pixel_y = 6
+	pixel_y = 6;
+	can_buckle = 0
 	},
 /obj/structure/bed/chair{
-	can_buckle = 0;
 	dir = 4;
 	pixel_x = 3;
-	pixel_y = 9
+	pixel_y = 9;
+	can_buckle = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
@@ -697,13 +715,13 @@
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
-	pixel_y = -10;
-	layer = 5.2
+	layer = 5.2;
+	pixel_y = -10
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
-	pixel_y = 6;
-	layer = 5.2
+	layer = 5.2;
+	pixel_y = 6
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -721,14 +739,17 @@
 	layer = 2.52
 	},
 /obj/structure/sign/safety/rewire{
-	pixel_y = 29;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 29
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
 "PZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
+	},
+/obj/structure/sign/banners/brazil_flag{
+	pixel_y = 28
 	},
 /obj/item/tool/mop{
 	pixel_x = -1;
@@ -739,17 +760,17 @@
 "Qd" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/CICmap{
+	name = "Tactical Map Display";
+	icon_state = "shuttle";
 	density = 0;
 	dir = 4;
-	icon_state = "shuttle";
 	layer = 2.97;
-	name = "Tactical Map Display";
 	pixel_x = 1;
 	pixel_y = 14
 	},
 /obj/item/prop/tableflag/uscm{
-	pixel_y = 2;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = 2
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -765,8 +786,8 @@
 	icon_state = "cargo"
 	},
 /obj/structure/sign/banners/united_americas_flag{
-	pixel_y = 28;
-	pixel_x = 15
+	pixel_x = 15;
+	pixel_y = 28
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -824,18 +845,18 @@
 "Yi" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap{
-	density = 0;
-	icon_state = "map";
-	layer = 2.97;
 	name = "Tactical Map Display";
+	icon_state = "map";
+	density = 0;
+	layer = 2.97;
 	pixel_y = 10
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
 /obj/structure/sign/safety/terminal{
-	pixel_y = 25;
-	layer = 2.96
+	layer = 2.96;
+	pixel_y = 25
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -844,12 +865,12 @@
 /area/golden_arrow/briefing)
 "ZU" = (
 /obj/structure/machinery/door_control{
-	pixel_y = 28;
 	pixel_x = -8;
+	pixel_y = 28;
 	id = "briefingdoor";
-	req_one_access_txt = "19;12";
+	normaldoorcontrol = 1;
 	specialfunctions = 4;
-	normaldoorcontrol = 1
+	req_one_access_txt = "19;12"
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -953,7 +974,7 @@ Op
 tL
 gk
 cU
-bs
+aa
 Uk
 "}
 (8,1,1) = {"
@@ -1005,7 +1026,7 @@ Uk
 Uk
 Nt
 Nt
-LT
+ab
 LT
 xk
 bq
