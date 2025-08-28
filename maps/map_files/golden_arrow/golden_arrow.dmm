@@ -4155,6 +4155,10 @@
 /obj/item/pamphlet/skill/surgery,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"aiF" = (
+/obj/structure/ship_ammo/rocket/napalm,
+/turf/open/floor/almayer/cargo/southwest,
+/area/golden_arrow/hangar)
 "aiG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -4171,6 +4175,18 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/prep_hallway)
+"aiI" = (
+/obj/structure/ship_ammo/heavygun,
+/obj/structure/ship_ammo/heavygun{
+	pixel_x = 3;
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/cargo/southwest,
+/area/golden_arrow/hangar)
+"aiJ" = (
+/obj/structure/dropship_equipment/weapon/rocket_pod,
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/hangar)
 "aiK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -4243,6 +4259,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"aiR" = (
+/obj/structure/dropship_equipment/weapon/heavygun,
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/hangar)
 "aiT" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -18292,7 +18312,10 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/prop/invuln/joey/normal,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
+	req_access = list();
+	req_one_access_txt = "8;12;39;40"
+	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "gDf" = (
@@ -19204,7 +19227,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/prop/invuln/joey/normal,
+/obj/structure/closet/secure_closet/engineering_materials,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "knD" = (
@@ -20060,7 +20083,6 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "ngb" = (
-/obj/structure/machinery/recharge_station,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -20070,6 +20092,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/closet/toolcloset,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "nhH" = (
@@ -22046,7 +22069,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/prop/invuln/joey/normal,
+/obj/structure/machinery/cm_vending/gear/engi,
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
 "uPX" = (
@@ -22540,6 +22563,11 @@
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
 	light_power = 0.7
+	},
+/obj/structure/ship_ammo/rocket/harpoon,
+/obj/structure/ship_ammo/rocket/harpoon{
+	pixel_x = -6;
+	pixel_y = 12
 	},
 /turf/open/floor/almayer/cargo/southwest,
 /area/golden_arrow/hangar)
@@ -33862,7 +33890,7 @@ vNW
 adz
 adz
 aEf
-aBg
+aiJ
 abC
 aWl
 aVb
@@ -34049,11 +34077,11 @@ adz
 ayX
 adz
 ajM
-vRh
+aiI
 aVD
 wPI
 aVD
-vRh
+aiF
 ajI
 adz
 ayX
@@ -34216,7 +34244,7 @@ aHZ
 adz
 adz
 aEf
-aBg
+aiR
 aOG
 aeb
 aLu
