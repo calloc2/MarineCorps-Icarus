@@ -22,6 +22,7 @@
 		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
 		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,
 		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE,
+		/datum/job/marine/engineer/ai = JOB_SQUAD_ENGI,
 		/datum/job/civilian/reporter = JOB_COMBAT_REPORTER,
 		/datum/job/civilian/synthetic = JOB_SYNTH
 	)
@@ -87,6 +88,7 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE,\
+		/datum/job/marine/engineer/ai = JOB_SQUAD_ENGI,\
 		/datum/job/civilian/reporter = JOB_COMBAT_REPORTER,\
 		/datum/job/civilian/synthetic = JOB_SYNTH),\
 		/datum/squad/marine/upp = list(/datum/job/command/bridge/ai/upp = JOB_SO,\
