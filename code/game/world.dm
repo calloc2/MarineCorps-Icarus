@@ -278,11 +278,9 @@ GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 
 	if(CONFIG_GET(string/servername))
 		s += "<a href=\"[CONFIG_GET(string/discordurl)]\"><b>[CONFIG_GET(string/servername)]</b></a>"
-		s += "<br>Hosted by: <b>[CONFIG_GET(string/hostedby)]</b>"
-		s += "<br>Round time: <b>[duration2text()]</b>"
-		s += "<br>An RP server focused on a tight knit platoon fighting xenos!"
-		s += "<br>Shoot the shit *and* shoot shit."
-
+		s += "<br>De brasileiros, para Brasileiros!</b>"
+		s += "<br>Tempo de Round: <b>[duration2text()]</b>"
+		s += "<br>Servidor Lusitano de CMSS13-PVE."
 	world.status = s
 
 /proc/set_global_view(view_size)
