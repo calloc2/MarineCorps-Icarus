@@ -1,16 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow"
-	},
-/obj/structure/machinery/door_control{
-	name = "muster point door-control";
-	pixel_x = 23;
-	pixel_y = -6;
-	id = "musterdoor"
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "ab" = (
 /obj/structure/sign/banners/brazil_flag{
 	pixel_y = 28
@@ -37,6 +25,9 @@
 "en" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
 /turf/open/floor/almayer/edge/smooth/endcap_right/west,
 /area/golden_arrow/briefing)
@@ -514,6 +505,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "IF" = (
@@ -595,7 +589,7 @@
 	icon_state = "wallpipe_2";
 	pixel_y = 31
 	},
-/turf/closed/wall/almayer/outer,
+/turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
 "Nw" = (
 /obj/effect/decal/cleanable/dirt{
@@ -604,7 +598,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "NS" = (
-/turf/closed/wall/almayer/outer,
+/obj/structure/machinery/door/poddoor/almayer{
+	name = "Emergency Passage";
+	id = "emergency_pass"
+	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/briefing)
 "NV" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
@@ -807,7 +805,7 @@ SP
 xZ
 WQ
 qv
-NS
+Ma
 mG
 "}
 (2,1,1) = {"
@@ -821,7 +819,7 @@ AX
 lY
 da
 Qu
-NS
+Ma
 mG
 "}
 (3,1,1) = {"
@@ -835,8 +833,8 @@ Ti
 NV
 FX
 Ry
-NS
-NS
+Ma
+Ma
 "}
 (4,1,1) = {"
 Kf
@@ -850,7 +848,7 @@ nk
 Fq
 Ry
 YE
-NS
+Ma
 "}
 (5,1,1) = {"
 Ma
@@ -864,7 +862,7 @@ Yo
 GT
 Ry
 Dy
-NS
+Ma
 "}
 (6,1,1) = {"
 Ma
@@ -877,8 +875,8 @@ Ff
 Vh
 Hj
 Mp
-NS
-NS
+Ma
+Ma
 "}
 (7,1,1) = {"
 Ma
@@ -891,7 +889,7 @@ Oa
 uv
 ez
 WP
-aa
+Ma
 mG
 "}
 (8,1,1) = {"
@@ -905,8 +903,8 @@ qP
 oB
 AM
 MK
-NS
-NS
+Ma
+Ma
 "}
 (9,1,1) = {"
 mG
@@ -920,7 +918,7 @@ Kk
 uN
 mm
 mm
-NS
+Ma
 "}
 (10,1,1) = {"
 mG
@@ -934,7 +932,7 @@ mm
 hz
 mm
 rk
-NS
+Ma
 "}
 (11,1,1) = {"
 mG
@@ -948,7 +946,7 @@ Kk
 hz
 mm
 Kk
-NS
+Ma
 "}
 (12,1,1) = {"
 mG
@@ -962,7 +960,7 @@ lH
 hz
 Kk
 mm
-NS
+Ma
 "}
 (13,1,1) = {"
 mG
@@ -976,7 +974,7 @@ JL
 ZY
 Vk
 iz
-NS
+Ma
 "}
 (14,1,1) = {"
 mG
@@ -990,7 +988,7 @@ ZG
 cs
 Wp
 Cb
-NS
+Ma
 "}
 (15,1,1) = {"
 mG

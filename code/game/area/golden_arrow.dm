@@ -58,6 +58,10 @@
 	name = "\improper Platoon Sergeant Office"
 	icon_state = "alpha"
 
+/area/golden_arrow/command
+	name = "\improper Command Division"
+	icon_state = "charlie"
+
 /area/golden_arrow/shared_office
 	name = "\improper Shared Office"
 	icon_state = "alpha"
