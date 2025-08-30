@@ -1,16 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow"
-	},
-/obj/structure/machinery/door_control{
-	name = "muster point door-control";
-	pixel_x = 23;
-	pixel_y = -6;
-	id = "musterdoor"
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/briefing)
 "ab" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -42,7 +30,11 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "bs" = (
-/turf/closed/wall/almayer/outer,
+/obj/structure/machinery/door/poddoor/almayer{
+	name = "Emergency Passage";
+	id = "emergency_pass"
+	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/briefing)
 "bA" = (
 /obj/structure/bed/chair{
@@ -95,7 +87,7 @@
 	icon_state = "wallpipe_2";
 	pixel_y = 31
 	},
-/turf/closed/wall/almayer/outer,
+/turf/closed/wall/almayer,
 /area/golden_arrow/briefing)
 "dO" = (
 /obj/structure/machinery/light/double/blue{
@@ -493,6 +485,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/almayer/edge/smooth/endcap_right/west,
 /area/golden_arrow/briefing)
 "CO" = (
@@ -804,6 +799,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "TT" = (
@@ -890,7 +888,7 @@ Yi
 NE
 AF
 Eh
-bs
+Nt
 Uk
 "}
 (2,1,1) = {"
@@ -904,7 +902,7 @@ wc
 XB
 NJ
 Xx
-bs
+Nt
 Uk
 "}
 (3,1,1) = {"
@@ -918,8 +916,8 @@ ln
 nZ
 lP
 Ax
-bs
-bs
+Nt
+Nt
 "}
 (4,1,1) = {"
 JH
@@ -933,7 +931,7 @@ IB
 ei
 Ax
 hw
-bs
+Nt
 "}
 (5,1,1) = {"
 Nt
@@ -947,7 +945,7 @@ kh
 mI
 Ax
 TT
-bs
+Nt
 "}
 (6,1,1) = {"
 Nt
@@ -960,8 +958,8 @@ eu
 jk
 xW
 Ur
-bs
-bs
+Nt
+Nt
 "}
 (7,1,1) = {"
 Nt
@@ -974,7 +972,7 @@ Op
 tL
 gk
 cU
-aa
+Nt
 Uk
 "}
 (8,1,1) = {"
@@ -988,8 +986,8 @@ PR
 ra
 FG
 dL
-bs
-bs
+Nt
+Nt
 "}
 (9,1,1) = {"
 Uk
@@ -1003,7 +1001,7 @@ LT
 eI
 bq
 bq
-bs
+Nt
 "}
 (10,1,1) = {"
 Uk
@@ -1017,7 +1015,7 @@ bq
 xk
 bq
 LT
-bs
+Nt
 "}
 (11,1,1) = {"
 Uk
@@ -1031,7 +1029,7 @@ LT
 xk
 bq
 LT
-bs
+Nt
 "}
 (12,1,1) = {"
 Uk
@@ -1045,7 +1043,7 @@ bq
 xk
 LT
 bq
-bs
+Nt
 "}
 (13,1,1) = {"
 Uk
@@ -1059,7 +1057,7 @@ lk
 zy
 fE
 zA
-bs
+Nt
 "}
 (14,1,1) = {"
 Uk
@@ -1073,7 +1071,7 @@ IX
 bp
 Qd
 rJ
-bs
+Nt
 "}
 (15,1,1) = {"
 Uk
