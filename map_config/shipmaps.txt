@@ -41,3 +41,6 @@ endmap
 
 map golden_arrow_wy
 endmap
+
+map uscss_tucano
+endmap
