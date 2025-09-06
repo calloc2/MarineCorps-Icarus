@@ -231,7 +231,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_pmc_smartgun, list(
 /obj/structure/machinery/cm_vending/gear/smartgun/pmc
 	name = "\improper PMC Squad Support Weapons Gear Rack"
 	desc = "An automated gear rack for Squad Support Weapons Specialist."
-	vendor_role = list(JOB_PMCPLAT_SG)
+	vendor_role = list(null)
 	req_access = list(ACCESS_WY_GENERAL)
 
 /obj/structure/machinery/cm_vending/gear/smartgun/pmc/get_listed_products(mob/user)
