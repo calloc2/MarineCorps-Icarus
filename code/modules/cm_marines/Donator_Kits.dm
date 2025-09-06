@@ -172,6 +172,17 @@
 		/obj/item/clothing/under/marine/fluff/feodrich,
 	)
 
+
+/obj/item/storage/box/donator_kit/nicolasvtl
+	donor_key = "nicolasvtl"
+	donor_gear = list(
+		/obj/item/clothing/head/helmet/marine/fluff/feodrich,
+		/obj/item/clothing/shoes/marine/fluff/feodrich,
+		/obj/item/clothing/suit/storage/marine/fluff/feodrich,
+		/obj/item/clothing/under/marine/fluff/feodrich,
+	)
+
+
 /obj/item/storage/box/donator_kit/fernkiller
 	donor_key = "fernkiller"
 	donor_gear = list(/obj/item/clothing/head/helmet/marine/fluff/fernkiller)
@@ -579,6 +590,14 @@
 		/obj/item/clothing/head/helmet/marine/fluff/killaninja12,
 		/obj/item/clothing/suit/storage/marine/fluff/killaninja12,
 	)
+
+/obj/item/storage/box/donator_kit/mruniverso
+	donor_key = "mruniverso"
+	donor_gear = list(
+		/obj/item/clothing/head/helmet/marine/fluff/killaninja12,
+		/obj/item/clothing/suit/storage/marine/fluff/killaninja12,
+	)
+
 
 /obj/item/storage/box/donator_kit/noize
 	donor_key = "noize"
