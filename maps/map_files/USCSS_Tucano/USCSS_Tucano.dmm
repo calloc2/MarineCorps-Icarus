@@ -2838,14 +2838,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/briefing)
-"aia" = (
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 2;
-	id = "supply_elevator_railing"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/spiralplate,
-/area/firefly/supply)
 "aib" = (
 /obj/structure/platform{
 	dir = 1
@@ -9474,7 +9466,7 @@
 	dir = 2;
 	id = "supply_elevator_railing"
 	},
-/turf/open/floor/corsat/spiralplate,
+/turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "aFn" = (
 /obj/structure/machinery/power/apc/almayer/hardened,
@@ -9763,8 +9755,8 @@
 /turf/open/floor/corsat/purple,
 /area/firefly/medical)
 "aZr" = (
-/obj/effect/landmark/supplyspawner,
-/turf/open/floor/plating/bare_catwalk,
+/obj/effect/landmark/supply_elevator,
+/turf/open/floor/almayer/empty/requisitions,
 /area/firefly/supply)
 "aZD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -11522,11 +11514,6 @@
 /obj/structure/machinery/computer/supply_drop_console/limited{
 	dir = 4
 	},
-/obj/structure/machinery/computer/supply_drop_console/limited{
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 1
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/supply)
 "cUr" = (
@@ -11658,17 +11645,6 @@
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/structure/largecrate/supply/motiondetectors,
 /turf/open/floor/corsat/cargo,
-/area/firefly/supply)
-"dcq" = (
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 8;
-	id = "supply_elevator_railing"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 4
-	},
-/turf/open/floor/corsat/spiralplate,
 /area/firefly/supply)
 "dcE" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -12822,9 +12798,6 @@
 	icon_state = "SE-out"
 	},
 /turf/open/floor/corsat/squares,
-/area/firefly/supply)
-"evp" = (
-/turf/open/floor/almayer/test_floor5,
 /area/firefly/supply)
 "ewY" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
@@ -14828,9 +14801,6 @@
 /obj/structure/blocker/invisible_wall/water,
 /turf/open/floor/shiva/radiator_tile2,
 /area/firefly/cryo_cell)
-"gGe" = (
-/turf/open/floor/almayer/empty/requisitions,
-/area/firefly/hangar)
 "gGn" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/corsat/yellowcorner/west,
@@ -16238,7 +16208,7 @@
 /obj/structure/machinery/gear{
 	id = "supply_elevator_gear"
 	},
-/turf/open/floor/corsat/spiralplate,
+/turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "hVM" = (
 /obj/structure/desertdam/decals/road_stop{
@@ -17164,9 +17134,6 @@
 "iZf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out"
-	},
-/obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -18993,9 +18960,6 @@
 	icon_state = "NW-out";
 	pixel_y = 1
 	},
-/obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
@@ -19084,7 +19048,7 @@
 /turf/open/floor/corsat/white/east,
 /area/firefly/hangar)
 "lhi" = (
-/turf/open/floor/plating/bare_catwalk,
+/turf/open/floor/almayer/empty/requisitions,
 /area/firefly/supply)
 "lhE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -19139,7 +19103,7 @@
 /obj/structure/machinery/gear{
 	id = "supply_elevator_gear"
 	},
-/turf/open/floor/corsat/spiralplate,
+/turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "lkK" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -20859,7 +20823,7 @@
 	dir = 4;
 	id = "supply_elevator_railing"
 	},
-/turf/open/floor/corsat/spiralplate,
+/turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "nsM" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -22382,17 +22346,6 @@
 /obj/structure/tunnel/maint_tunnel,
 /turf/open/floor/corsat/squares,
 /area/firefly/supply)
-"pfQ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 8
-	},
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 4;
-	id = "supply_elevator_railing"
-	},
-/turf/open/floor/corsat/spiralplate,
-/area/firefly/supply)
 "pgD" = (
 /obj/structure/medical_supply_link/green,
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
@@ -23535,7 +23488,7 @@
 /obj/structure/machinery/gear{
 	id = "supply_elevator_gear"
 	},
-/turf/open/floor/corsat/spiralplate,
+/turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "qcB" = (
 /obj/effect/decal/warning_stripes{
@@ -24424,9 +24377,6 @@
 "rcB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
-	},
-/obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -25432,20 +25382,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/supply)
-"sqx" = (
-/obj/structure/machinery/door/poddoor/railing{
-	dir = 2;
-	id = "supply_elevator_railing"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow2";
-	dir = 1
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/hangar)
 "ssM" = (
 /obj/structure/platform,
 /obj/structure/platform{
@@ -25542,16 +25478,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/firefly/cafeteria)
-"sEm" = (
-/obj/structure/prop/almayer/missile_tube{
-	icon_state = "missiletubesouth";
-	layer = 10
-	},
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/turf/open/floor/almayer_hull,
-/area/space)
 "sEo" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -25972,10 +25898,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/supply)
-"sTS" = (
-/obj/effect/landmark/supply_elevator,
-/turf/open/floor/almayer/empty/requisitions,
-/area/firefly/hangar)
 "sUL" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -26105,7 +26027,7 @@
 	dir = 8;
 	id = "supply_elevator_railing"
 	},
-/turf/open/floor/corsat/spiralplate,
+/turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "sZo" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -26975,14 +26897,12 @@
 /area/firefly/medical)
 "ugv" = (
 /obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 1
+	icon_state = "NW-out"
 	},
 /obj/structure/machinery/gear{
 	id = "supply_elevator_gear"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/spiralplate,
+/turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "ugG" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -27020,7 +26940,7 @@
 /obj/structure/machinery/door/poddoor/railing{
 	id = "supply_elevator_railing"
 	},
-/turf/open/floor/corsat/spiralplate,
+/turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "ukc" = (
 /obj/structure/platform_decoration,
@@ -28057,9 +27977,6 @@
 "vty" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
-	},
-/obj/structure/machinery/gear{
-	id = "supply_elevator_gear"
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -41020,7 +40937,7 @@ gDY
 ahV
 ahn
 epE
-sEm
+pyU
 oew
 fDZ
 fDZ
@@ -44097,9 +44014,9 @@ awT
 vHH
 qcm
 nrd
-pfQ
-pfQ
-pfQ
+nrd
+nrd
+nrd
 nrd
 hVf
 ahc
@@ -44421,9 +44338,9 @@ adD
 aii
 aFb
 lhi
-evp
 lhi
-evp
+lhi
+lhi
 lhi
 ujk
 vCv
@@ -44581,7 +44498,7 @@ iYs
 wKz
 cmN
 veV
-aia
+aFb
 lhi
 lhi
 aZr
@@ -44743,11 +44660,11 @@ vKQ
 wKz
 uDn
 asa
-aia
+aFb
 lhi
-evp
 lhi
-evp
+lhi
+lhi
 lhi
 ujk
 toG
@@ -44905,7 +44822,7 @@ foQ
 wKz
 tyj
 aii
-aia
+aFb
 lhi
 lhi
 lhi
@@ -45069,9 +44986,9 @@ tyj
 aii
 lkk
 sZh
-dcq
-dcq
-dcq
+sZh
+sZh
+sZh
 sZh
 ugv
 uMA
@@ -47410,11 +47327,11 @@ oOZ
 ann
 amJ
 fgJ
-gGe
-gGe
-gGe
-gGe
-gGe
+avP
+avP
+avP
+avP
+avP
 dJb
 agO
 acR
@@ -47571,12 +47488,12 @@ ang
 oOZ
 ann
 amJ
-sqx
-gGe
-gGe
-gGe
-gGe
-gGe
+fgJ
+avP
+avP
+avP
+avP
+avP
 wUT
 amg
 acR
@@ -47733,12 +47650,12 @@ ang
 oOZ
 ann
 acZ
-sqx
-gGe
-gGe
-sTS
-gGe
-gGe
+fgJ
+avP
+avP
+avP
+avP
+avP
 wUT
 acT
 acR
@@ -47895,12 +47812,12 @@ ang
 oOZ
 iQX
 acZ
-sqx
-gGe
-gGe
-gGe
-gGe
-gGe
+fgJ
+avP
+avP
+avP
+avP
+avP
 wUT
 amg
 acR
@@ -48058,11 +47975,11 @@ oOZ
 iQX
 acZ
 fgJ
-gGe
-gGe
-gGe
-gGe
-gGe
+avP
+avP
+avP
+avP
+avP
 dJb
 amh
 acR

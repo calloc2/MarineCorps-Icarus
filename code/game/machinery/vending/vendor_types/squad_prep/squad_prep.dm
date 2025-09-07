@@ -96,6 +96,7 @@
 		list("M37A2 Pump Shotgun", floor(scale * 15), /obj/item/weapon/gun/shotgun/pump, VENDOR_ITEM_REGULAR),
 		list("FN FP9000/2 Submachinegun", floor(scale * 30), /obj/item/weapon/gun/smg/fp9000/pmc, VENDOR_ITEM_REGULAR),
 		list("NSG 23 Assault Rifle", floor(scale * 30), /obj/item/weapon/gun/rifle/nsg23, VENDOR_ITEM_RECOMMENDED),
+		list("M41A Pulse Rifle MK2", floor(scale * 5), /obj/item/weapon/gun/rifle/m41a, VENDOR_ITEM_REGULAR),
 
 		list("PRIMARY AMMUNITION", -1, null, null),
 		list("Box of Flechette Shells (12g)", floor(scale * 4), /obj/item/ammo_magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
@@ -107,6 +108,7 @@
 		list("NSG 23 magazine (10x24mm)", floor(scale * 40), /obj/item/ammo_magazine/rifle/nsg23, VENDOR_ITEM_REGULAR),
 		list("NSG 23 extended magazine (10x24mm)", floor(scale * 30), /obj/item/ammo_magazine/rifle/nsg23/extended, VENDOR_ITEM_REGULAR),
 		list("NSG 23 armor-piercing magazine (10x24mm)", floor(scale * 25), /obj/item/ammo_magazine/rifle/nsg23/ap, VENDOR_ITEM_REGULAR),
+		list("M41A Magazine (10x24mm)", floor(scale * 25), /obj/item/ammo_magazine/rifle, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
 		list("VP78 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp78/unloaded, VENDOR_ITEM_REGULAR),
