@@ -179,7 +179,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_smartgun_pmc, list(
 
 GLOBAL_LIST_INIT(cm_vending_gear_pmc_smartgun, list(
 		list("SMARTGUN SET (MANDATORY)", 0, null, null, null),
-		list("Essential Smartgunner Set", 0, /obj/item/storage/box/m56_system, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential Smartgunner Set", 0, /obj/item/storage/box/m56_dirty_system, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("GUN ATTACHMENTS (CHOOSE 1)", 0, null, null, null),
 		list("Laser Sight", 0, /obj/item/attachable/lasersight, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
@@ -231,7 +231,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_pmc_smartgun, list(
 /obj/structure/machinery/cm_vending/gear/smartgun/pmc
 	name = "\improper PMC Squad Support Weapons Gear Rack"
 	desc = "An automated gear rack for Squad Support Weapons Specialist."
-	vendor_role = list(null)
+	vendor_role = list(JOB_SQUAD_SMARTGUN)
 	req_access = list(ACCESS_WY_GENERAL)
 
 /obj/structure/machinery/cm_vending/gear/smartgun/pmc/get_listed_products(mob/user)
