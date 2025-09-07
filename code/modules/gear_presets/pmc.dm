@@ -751,6 +751,9 @@
 
 /datum/equipment_preset/pmc/synth/barebones
 	name = "Weyland-Yutani PMC (Support Synthetic(Minimally Equipped))"
+/datum/equipment_preset/pmc/synth/barebones/New()
+	. = ..()
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_SENIOR_LEAD, ACCESS_WY_ARMORY, ACCESS_WY_SECRETS, ACCESS_WY_DATABASE, ACCESS_WY_SENIOR_LEAD, ACCESS_MARINE_SYNTH)
 
 /datum/equipment_preset/pmc/synth/barebones/load_gear(mob/living/carbon/human/new_human)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
