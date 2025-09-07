@@ -102,8 +102,10 @@
 	gear_preset = /datum/equipment_preset/pmc/xeno_handler
 
 /datum/job/special/wey_yu/pmc/synth
+	total_positions = 2
+	spawn_positions = 2
 	title = JOB_PMC_SYNTH
-	gear_preset = /datum/equipment_preset/pmc/synth
+	gear_preset = /datum/equipment_preset/pmc/synth/barebones
 
 /datum/job/special/wey_yu/pmc/director
 	title = JOB_PMC_DIRECTOR
