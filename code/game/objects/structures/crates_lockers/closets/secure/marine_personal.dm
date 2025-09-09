@@ -154,3 +154,33 @@
 	new /obj/item/clothing/shoes/laceup(src)
 	new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/corporate/formal(src)
+
+/obj/structure/closet/secure_closet/marine_personal/brazil/spawn_gear() // não vou mudar os da pmc pq eu sou do bem.
+	new /obj/item/clothing/under/marine/veteran/pmc/brazil(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
+	new /obj/item/clothing/shoes/marine/civilian/knife(src)
+
+/obj/structure/closet/secure_closet/marine_personal/brazil/rifleman
+	job = JOB_SQUAD_MARINE
+
+/obj/structure/closet/secure_closet/marine_personal/brazil/smartgunner
+	job = JOB_SQUAD_SMARTGUN
+
+/obj/structure/closet/secure_closet/marine_personal/brazil/corpsman
+	job = JOB_SQUAD_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/brazil/squad_leader
+	job = JOB_SQUAD_TEAM_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/brazil/platoon_leader
+	job = JOB_SQUAD_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/brazil/platoon_commander
+	job = JOB_SO
+
+/obj/structure/closet/secure_closet/marine_personal/brazil/platoon_commander/spawn_gear()
+	new /obj/item/clothing/head/beret/pmc(src)
+	new /obj/item/clothing/under/marine/veteran/pmc/leader/brazil(src)
+	new /obj/item/clothing/shoes/marine/civilian/knife(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/corporate/formal(src)

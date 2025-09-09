@@ -1,25 +1,27 @@
+#define EQUIPMENT_PRESET_EXTRA (1<<1)
 
-/datum/equipment_preset/pmc
-	name = "PMC"
+/datum/equipment_preset/fecb
+	name = "FECB"
 	faction = FACTION_PMC
 	rank = FACTION_PMC
 	idtype = /obj/item/card/id/pmc
 	faction = FACTION_PMC
 	faction_group = FACTION_LIST_WY
-	languages = list(LANGUAGE_ENGLISH)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_PORTUGUESE)
 	var/human_versus_human = FALSE
 
-/datum/equipment_preset/pmc/New()
+/datum/equipment_preset/fecb/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_WY_PMC)
 
-/datum/equipment_preset/pmc/load_name(mob/living/carbon/human/new_human, randomise)
+/datum/equipment_preset/fecb/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(75;MALE,25;FEMALE)
 	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
-	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
-	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
-	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+	new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
+	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male_brazilian : GLOB.first_names_female_brazilian)) + " " + capitalize(pick(GLOB.last_names_brazilian))
+	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
 	var/hair_color = pick(hair_colors)
 	new_human.r_hair = hair_colors[hair_color][1]
 	new_human.g_hair = hair_colors[hair_color][2]
@@ -39,7 +41,7 @@
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,35)
 
-/datum/equipment_preset/pmc/load_id(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/fecb/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	if(human_versus_human)
 		var/obj/item/clothing/under/uniform = new_human.w_uniform
 		if(istype(uniform))
@@ -49,15 +51,15 @@
 
 
 //*****************************************************************************************************/
-/datum/equipment_preset/pmc/standard
-	name = "Weyland-Yutani PMC (Standard)"
+/datum/equipment_preset/fecb/standard
+	name = "WY FECB Unit (Standard)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_PMC_STANDARD
 	rank = JOB_PMC_STANDARD
 	paygrades = list(PAY_SHORT_PMC_OP = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pmc
 
-/datum/equipment_preset/pmc/standard/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fecb/standard/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -70,7 +72,7 @@
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/weyyu, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/brazil/uniform = new()
 	var/random_uniform = rand(1,2)
 	switch(random_uniform)
 		if(1)
@@ -86,9 +88,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/regular, WEAR_IN_ACCESSORY)
 	//jacket
 	if(prob(45))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc, WEAR_JACKET)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/brazil, WEAR_JACKET)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light, WEAR_JACKET)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light/brazil, WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc, WEAR_WAIST)
 	//limbs
@@ -112,15 +114,15 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_L_STORE)
 
 //*****************************************************************************************************/
-/datum/equipment_preset/pmc/medic
-	name = "Weyland-Yutani PMC (Corporate Medic)"
+/datum/equipment_preset/fecb/medic
+	name = "WY FECB Unit (Corporate Medic)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_PMC_MEDIC
 	rank = JOB_PMC_MEDIC
 	paygrades = list(PAY_SHORT_PMC_MS = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pmc/medic
 
-/datum/equipment_preset/pmc/medic/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fecb/medic/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv, WEAR_IN_BACK)
@@ -153,9 +155,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/regular, WEAR_IN_ACCESSORY)
 	//jacket
 	if(prob(45))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc, WEAR_JACKET)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/brazil, WEAR_JACKET)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light, WEAR_JACKET)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light/brazil, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/surgical_case/regular, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39, WEAR_J_STORE)
 	//waist
@@ -174,11 +176,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/extended, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/extended, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/ap, WEAR_IN_R_STORE)
-/datum/equipment_preset/pmc/pmc_med_investigator/get_antag_clothing_equipment()
+/datum/equipment_preset/fecb/pmc_med_investigator/get_antag_clothing_equipment()
 	return list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Boots", 0, /obj/item/clothing/shoes/marine/rmc, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
-		list("Fatigues", 0, /obj/item/clothing/under/marine/veteran/pmc, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("Fatigues", 0, /obj/item/clothing/under/marine/veteran/pmc/brazil, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("Gloves", 0, /obj/item/clothing/gloves/marine/veteran/pmc, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Headset", 0, /obj/item/device/radio/headset/distress/pmc/hvh, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0,  /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
@@ -188,8 +190,8 @@
 		list("Medical HUD Glasses", 0, /obj/item/clothing/glasses/hud/health, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_MANDATORY),
 
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
-		list("Standard Armor", 0, /obj/item/clothing/suit/storage/marine/veteran/pmc, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
-		list("Light Armor", 0, /obj/item/clothing/suit/storage/marine/veteran/pmc/light, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("Standard Armor", 0, /obj/item/clothing/suit/storage/marine/veteran/pmc/brazil, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+		list("Light Armor", 0, /obj/item/clothing/suit/storage/marine/veteran/pmc/light/brazil, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("M276 Ammo Load Rig", 0, /obj/item/storage/belt/marine, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
@@ -232,7 +234,7 @@
 		list("Vertical Grip", 0, /obj/item/attachable/verticalgrip, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
 	)
 
-/datum/equipment_preset/pmc/pmc_med_investigator/get_antag_gear_equipment()
+/datum/equipment_preset/fecb/pmc_med_investigator/get_antag_gear_equipment()
 	return list(
 		list("MEDIC SET (MANDATORY)", 0, null, null, null),
 		list("Essential Medic Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
@@ -305,8 +307,8 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/pmc/leader
-	name = "Weyland-Yutani PMC (Leader)"
+/datum/equipment_preset/fecb/leader
+	name = "WY FECB Unit (Leader)"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	assignment = JOB_PMC_LEADER
@@ -315,11 +317,11 @@
 	role_comm_title = "SL"
 	skills = /datum/skills/pmc/SL
 
-/datum/equipment_preset/pmc/leader/New()
+/datum/equipment_preset/fecb/leader/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_WY_PMC) + list(ACCESS_WY_LEADERSHIP, ACCESS_WY_PMC_TL)
 
-/datum/equipment_preset/pmc/leader/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fecb/leader/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive, WEAR_IN_BACK)
@@ -334,7 +336,7 @@
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/weyyu, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/brazil/uniform = new()
 	var/random_uniform = rand(1,2)
 	switch(random_uniform)
 		if(1)
@@ -349,10 +351,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/emergency, WEAR_IN_ACCESSORY)
 	//jacket
-	if(prob(45))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc, WEAR_JACKET)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/corporate/brazil, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/elite, WEAR_J_STORE)
@@ -375,8 +374,8 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/pmc/gunner
-	name = "Weyland-Yutani PMC (Gunner)"
+/datum/equipment_preset/fecb/gunner
+	name = "WY FECB Unit (Gunner)"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	assignment = JOB_PMC_GUNNER
@@ -385,7 +384,7 @@
 	role_comm_title = "SG"
 	skills = /datum/skills/pmc/smartgunner
 
-/datum/equipment_preset/pmc/gunner/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fecb/gunner/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
 	//face
@@ -393,7 +392,7 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/brazil/uniform = new()
 	var/random_uniform = rand(1,2)
 	switch(random_uniform)
 		if(1)
@@ -408,7 +407,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/emergency, WEAR_IN_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/brazil, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/pmc/full, WEAR_WAIST)
@@ -425,8 +424,8 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/pmc/sniper
-	name = "Weyland-Yutani PMC (Sniper)"
+/datum/equipment_preset/fecb/sniper
+	name = "WY FECB Unit (Sniper)"
 	flags = EQUIPMENT_PRESET_EXTRA
 
 	assignment = JOB_PMC_SNIPER
@@ -435,7 +434,7 @@
 	role_comm_title = "Spc"
 	skills = /datum/skills/pmc/specialist
 
-/datum/equipment_preset/pmc/sniper/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fecb/sniper/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
@@ -452,7 +451,7 @@
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/weyyu, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/pmc/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/pmc/brazil/uniform = new()
 	var/random_uniform = rand(1,2)
 	switch(random_uniform)
 		if(1)
@@ -467,7 +466,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/regular, WEAR_IN_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light/brazil, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/elite, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/elite/basic, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/elite/basic, WEAR_IN_JACKET)
@@ -480,19 +479,19 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/pmc_sniper, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 //*****************************************************************************************************/
-/datum/equipment_preset/pmc/crewman
-	name = "Weyland-Yutani PMC (Crewman)"
+/datum/equipment_preset/fecb/crewman
+	name = "WY FECB Unit (Crewman)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_PMC_CREWMAN
 	rank = JOB_PMC_CREWMAN
 	paygrades = list(PAY_SHORT_PMC_VS = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pmc/tank_crew
 
-/datum/equipment_preset/pmc/crewman/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fecb/crewman/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc/brazil, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/brazil, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding/superior, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc, WEAR_FACE)
@@ -506,270 +505,4 @@
 
 	spawn_weapon(/obj/item/weapon/gun/smg/m39, /obj/item/ammo_magazine/smg/m39, new_human, 0, 0)
 
-/*****************************************************************************************************/
-
-/datum/equipment_preset/pmc/xeno_handler
-	name = "Weyland-Yutani PMC (Xeno Handler)"
-	flags = EQUIPMENT_PRESET_EXTRA
-
-	faction_group = FACTION_LIST_MARINE_WY
-
-	assignment = JOB_PMC_XENO_HANDLER
-	rank = JOB_PMC_XENO_HANDLER
-	paygrades = list(PAY_SHORT_PMC_XS = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "XH"
-	skills = /datum/skills/pmc/xeno_handler
-	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE, LANGUAGE_XENOMORPH)
-
-/datum/equipment_preset/pmc/xeno_handler/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc, WEAR_FACE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/multitool, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/bruise_pack, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/burn, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/splint, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/emergency, WEAR_IN_ACCESSORY)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/vp70, WEAR_WAIST)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/pmc_m39, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
-
-/*****************************************************************************************************/
-
-/datum/equipment_preset/pmc/doctor
-	name = "Weyland-Yutani PMC (Trauma Surgeon)"
-	flags = EQUIPMENT_PRESET_EXTRA
-
-	assignment = JOB_PMC_DOCTOR
-	rank = JOB_PMC_DOCTOR
-	paygrades = list(PAY_SHORT_PMC_DOC = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SGN"
-	skills = /datum/skills/pmc/doctor
-
-/datum/equipment_preset/pmc/doctor/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc, WEAR_FACE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/equipped, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full/dutch, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
-
-	if(new_human.disabilities & NEARSIGHTED)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription(new_human), WEAR_EYES)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
-
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39, WEAR_J_STORE)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/roller/surgical, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_advanced, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pressurized_reagent_canister/oxycodone, WEAR_R_STORE) //surgery
-
-/*****************************************************************************************************/
-
-/datum/equipment_preset/pmc/technician
-	name = "Weyland-Yutani PMC (Corporate Technician)"
-	flags = EQUIPMENT_PRESET_EXTRA
-
-	assignment = JOB_PMC_ENGINEER
-	rank = JOB_PMC_ENGINEER
-	paygrades = list(PAY_SHORT_PMC_TEC = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "TEC"
-	skills = /datum/skills/pmc/engineer
-
-/datum/equipment_preset/pmc/technician/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc, WEAR_FACE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest/brown_vest, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding/superior, WEAR_EYES)
-
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_JACKET)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/defenses/handheld/sentry/wy/mini, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/defenses/handheld/sentry/wy/mini, WEAR_IN_BACK)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full, WEAR_R_STORE)
-
-/*****************************************************************************************************/
-
-/datum/equipment_preset/pmc/director
-	name = "Weyland-Yutani PMC (Corporate Operations Director)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	languages = ALL_HUMAN_LANGUAGES
-
-	assignment = JOB_PMC_DIRECTOR
-	rank = JOB_PMC_DIRECTOR
-	paygrades = list(PAY_SHORT_PMC_DIR = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Dir"
-	skills = /datum/skills/pmc/director
-/datum/equipment_preset/pmc/director/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable, WEAR_BACK)
-	var/obj/item/storage/pouch/pistol/command/command_pouch = new(new_human)
-	command_pouch.desc = replacetext(command_pouch.desc, "Captains", "corporate PMC directors")
-	new_human.equip_to_slot_or_del(command_pouch, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/cotablet/pmc(new_human), WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
-	var/obj/item/device/radio/headset/R = new_human.wear_l_ear
-	if(istype(R))
-		R.volume = RADIO_VOLUME_CRITICAL
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/pmc/synth
-	name = "Weyland-Yutani PMC (Support Synthetic)"
-	flags = EQUIPMENT_PRESET_EXTRA
-
-	languages = ALL_SYNTH_LANGUAGES
-
-	skills = /datum/skills/synthetic
-	idtype = /obj/item/card/id/pmc
-	assignment = JOB_PMC_SYNTH
-	rank = JOB_PMC_SYNTH
-	paygrades = list(PAY_SHORT_SYN = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "WY Syn"
-
-/datum/equipment_preset/pmc/synth/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(50;MALE,50;FEMALE)
-	var/datum/preferences/A = new()
-	A.randomize_appearance(new_human)
-	var/random_name
-	if(prob(10))
-		random_name = "[capitalize(randomly_generate_japanese_word(rand(2, 3)))]"
-	else if(new_human.gender == MALE)
-		random_name = "[pick(GLOB.first_names_male_pmc)]"
-	else
-		random_name = "[pick(GLOB.first_names_female_pmc)]"
-
-	if(new_human.gender == MALE)
-		new_human.f_style = "5 O'clock Shadow"
-
-	new_human.change_real_name(new_human, random_name)
-	new_human.r_hair = 15
-	new_human.g_hair = 15
-	new_human.b_hair = 25
-	new_human.r_eyes = 139
-	new_human.g_eyes = 62
-	new_human.b_eyes = 19
-
-/datum/equipment_preset/pmc/synth/load_race(mob/living/carbon/human/new_human)
-		new_human.set_species(SYNTH_GEN_THREE)
-
-/datum/equipment_preset/pmc/synth/load_skills(mob/living/carbon/human/new_human)
-		new_human.set_skills(/datum/skills/synthetic)
-		new_human.allow_gun_usage = FALSE
-
-/datum/equipment_preset/pmc/synth/load_gear(mob/living/carbon/human/new_human)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/equipped, WEAR_ACCESSORY)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth, WEAR_JACKET)
-		new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_JACKET)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/crew_monitor/pmc, WEAR_IN_JACKET)
-		new_human.equip_to_slot_or_del(new /obj/item/roller/surgical, WEAR_IN_JACKET)
-
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc/platoon/synth, WEAR_L_EAR)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/experimental_mesons, WEAR_EYES)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc, WEAR_FACE)
-
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
-
-		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/smartpack/white, WEAR_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/roller/surgical, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/crew_monitor/pmc, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_BACK)
-
-		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full/dutch, WEAR_WAIST)
-
-		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical, WEAR_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver/tactical, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/wrench, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/stack/cable_coil, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/device/multitool, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/hugetank, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire, WEAR_R_STORE)
-
-/datum/equipment_preset/pmc/synth/barebones
-	name = "Weyland-Yutani PMC (Support Synthetic(Minimally Equipped))"
-/datum/equipment_preset/pmc/synth/barebones/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_GLOBAL)
-
-/datum/equipment_preset/pmc/synth/barebones/load_gear(mob/living/carbon/human/new_human)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth, WEAR_JACKET)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/snow, WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/experimental_mesons, WEAR_EYES)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
-		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/smartpack/white, WEAR_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical, WEAR_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver/tactical, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/wrench, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/stack/cable_coil, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/stack/cable_coil, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/device/multitool, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/hugetank, WEAR_IN_L_STORE)
+#undef EQUIPMENT_PRESET_EXTRA
