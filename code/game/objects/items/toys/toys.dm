@@ -595,6 +595,11 @@
 	color = color_code
 	desc = "A custom therapy plush, in a unique color."
 
+/obj/item/toy/plush/cirno
+	name = "fairy plush"
+	desc = "9"
+	icon_state = "cirno"
+
 /obj/item/toy/plush/random_plushie //Not using an effect so it can fit into storage from loadout
 	name = "random plush"
 	desc = "This plush looks awfully standard and bland. Is it actually yours?"
@@ -611,6 +616,7 @@
 		/obj/item/toy/plush/kitten,
 		/obj/item/toy/plush/box,
 		/obj/item/toy/plush/carp,
+		/obj/item/toy/plush/cirno,
 	)
 	///Therapy plushies left separately to not flood the entire list
 	var/list/therapy_plush_list = list(

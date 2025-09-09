@@ -28,6 +28,7 @@
 	name = "\improper WY tactical armor"
 	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries."
 	icon_state = "pmc_armor"
+	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY) //EU QUERO WEBBING SEM TRABALAHAR
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
@@ -132,6 +133,7 @@
 	name = "\improper PMC gunner armor"
 	desc = "A modification of the standard Armat Systems M3 armor. Hooked up with harnesses and straps allowing the user to carry an M56 Smartgun."
 	icon_state = "heavy_armor"
+	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY) //EU QUERO WEBBING SEM TRABALAHAR
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
 	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE

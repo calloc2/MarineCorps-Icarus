@@ -7087,9 +7087,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "asO" = (
-/obj/structure/pipes/standard/manifold/hidden/supply{
-	dir = 4
-	},
+/obj/structure/pipes/standard/manifold/fourway/hidden/supply,
 /turf/open/floor/corsat/arrow_east,
 /area/firefly/hangar)
 "asP" = (
@@ -18542,6 +18540,11 @@
 	freerange = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/toy/plush/cirno{
+	desc = "9. o comando consegue ser tão burro quanto ela.";
+	pixel_x = -15;
+	pixel_y = 4
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
 "kFl" = (
