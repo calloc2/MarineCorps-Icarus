@@ -1,0 +1,76 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/blocker/tent/full_tile,
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/structure/blocker/tent{
+	dir = 8
+	},
+/obj/structure/surface/table,
+/obj/structure/blocker/tent{
+	dir = 1
+	},
+/obj/structure/machinery/computer/overwatch/tent{
+	faction = "PMC"
+	},
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/obj/structure/blocker/tent{
+	dir = 4
+	},
+/obj/structure/blocker/tent{
+	dir = 1
+	},
+/obj/structure/surface/table,
+/obj/structure/phone_base/tent{
+	pixel_x = -2;
+	pixel_y = 6;
+	phone_category = "Command";
+	phone_id = "Ground Command"
+	},
+/turf/template_noop,
+/area/template_noop)
+"d" = (
+/obj/structure/blocker/tent{
+	dir = 8
+	},
+/obj/structure/bed/chair,
+/turf/template_noop,
+/area/template_noop)
+"e" = (
+/obj/structure/blocker/tent{
+	dir = 4
+	},
+/obj/structure/bed/chair,
+/turf/template_noop,
+/area/template_noop)
+"f" = (
+/obj/structure/blocker/tent{
+	dir = 8
+	},
+/obj/structure/tent_curtain,
+/obj/structure/tent/cmd/pmc,
+/turf/template_noop,
+/area/template_noop)
+"g" = (
+/obj/structure/blocker/tent{
+	dir = 4
+	},
+/obj/structure/tent_curtain,
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+b
+d
+f
+"}
+(2,1,1) = {"
+a
+c
+e
+g
+"}

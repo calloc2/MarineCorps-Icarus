@@ -132,6 +132,12 @@
 	desc = "A standard USCM Command Tent. This one comes equipped with a self-powered Overwatch Console and a Telephone. Unfold in a suitable location to maximize usefulness. Staff Officer not included. ENTRANCE TO THE SOUTH."
 	template_preset = "tent_cmd"
 
+/obj/item/folded_tent/cmd/pmc
+	name = "folded PMC Command Tent"
+	icon_state = "cmd"
+	desc = "A standard PMC Command Tent. This one comes equipped with a self-powered Overwatch Console and a Telephone. Unfold in a suitable location to maximize usefulness. Staff Officer not included. ENTRANCE TO THE SOUTH."
+	template_preset = "tent_cmd_pmc"
+
 /obj/item/folded_tent/med
 	name = "folded USCM Medical Tent"
 	icon_state = "med"
