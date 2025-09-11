@@ -122,6 +122,9 @@
 	roof_state = "cmd_top"
 	desc = "A standard USCM Command Tent. This one comes equipped with a self-powered Overwatch Console and a Telephone. It is very frail, do not burn, expose to sharp objects, or explosives. Can be torn down with an entrenching tool."
 
+/obj/structure/tent/cmd/pmc
+	desc = "A standard PMC Command Tent. This one comes equipped with a self-powered Overwatch Console and a Telephone. It is very frail, do not burn, expose to sharp objects, or explosives. Can be torn down with an entrenching tool."
+
 /// Medical tent, procures a buff to surgery speed
 /obj/structure/tent/med
 	icon_state = "med_interior"
